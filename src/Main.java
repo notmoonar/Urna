@@ -17,7 +17,6 @@ public class Main {
         c3 = "Osvaldo"; /// Nome do candidato cadastrado
 
 
-
         /// Menûs usados para o programa
         String menuA = """        
         **************************************
@@ -125,8 +124,8 @@ public class Main {
                     System.out.println(vContabilizados.formatted
                     (c1,cV1,c2,cV2,c3,cV3,branco,nulo));
                     
-                    if ((total < cV1) || (total > cV2) || (total > cV3)){
-                        
+                    if ((total < cV1) || (total < cV2) || (total < cV3)){
+
                         System.out.println(ganhador.formatted(winner));
                     }
                     else {
