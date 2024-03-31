@@ -84,7 +84,7 @@ public class Main {
         *
         ****************************************
         """,
-        ganhador = "%s ganhou a eleição nesta urna.";
+        ganhador = "%s ganhou a eleição nesta urna.\n";
         
 
         Scanner scanner = new Scanner(System.in);
@@ -122,16 +122,16 @@ public class Main {
                 senhaImput = scanner.nextInt();
                 if (senhaImput == senhaCode) {
                     System.out.println(vContabilizados.formatted
+                    
                     (c1,cV1,c2,cV2,c3,cV3,branco,nulo));
                     
-                    if ((total < cV1) || (total < cV2) || (total < cV3)){
-
-                        System.out.println(ganhador.formatted(winner));
+                    System.out.println((total < cV1) ? ganhador.formatted(c1) :
+                    (total < cV2) ? ganhador.formatted(c2) : 
+                    (total < cV2) ? ganhador.formatted(c3) :
+                    "Havera um segundo turno");
+                    menu1 = 3;
                     }
-                    else {
-
-                    }
-                } else {
+                else {
                     System.out.println("Acesso Negado.");
                 }
             }
